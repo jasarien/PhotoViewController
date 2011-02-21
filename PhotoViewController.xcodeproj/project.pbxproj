@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A995B961312798300781831 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A995B951312798300781831 /* UIKit.framework */; };
+		1A995B981312798300781831 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A995B971312798300781831 /* Foundation.framework */; };
+		1A995B9A1312798300781831 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A995B991312798300781831 /* CoreGraphics.framework */; };
+		1A995BA01312798300781831 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A995B9E1312798300781831 /* InfoPlist.strings */; };
+		1A995BA31312798300781831 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BA21312798300781831 /* main.m */; };
+		1A995BA61312798300781831 /* PhotoViewControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BA51312798300781831 /* PhotoViewControllerAppDelegate.m */; };
+		1A995BA91312798300781831 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BA71312798300781831 /* MainWindow.xib */; };
+		1A995BAC1312798300781831 /* PhotoViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BAB1312798300781831 /* PhotoViewControllerViewController.m */; };
+		1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A995B911312798300781831 /* PhotoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A995B951312798300781831 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1A995B971312798300781831 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1A995B991312798300781831 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1A995B9D1312798300781831 /* PhotoViewController-Info.plist */ = {isa = PBXFileReference; path = "PhotoViewController-Info.plist"; sourceTree = "<group>"; };
+		1A995B9F1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A995BA11312798300781831 /* PhotoViewController-Prefix.pch */ = {isa = PBXFileReference; path = "PhotoViewController-Prefix.pch"; sourceTree = "<group>"; };
+		1A995BA21312798300781831 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A995BA41312798300781831 /* PhotoViewControllerAppDelegate.h */ = {isa = PBXFileReference; path = PhotoViewControllerAppDelegate.h; sourceTree = "<group>"; };
+		1A995BA51312798300781831 /* PhotoViewControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerAppDelegate.m; sourceTree = "<group>"; };
+		1A995BA81312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1A995BAA1312798300781831 /* PhotoViewControllerViewController.h */ = {isa = PBXFileReference; path = PhotoViewControllerViewController.h; sourceTree = "<group>"; };
+		1A995BAB1312798300781831 /* PhotoViewControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerViewController.m; sourceTree = "<group>"; };
+		1A995BAE1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotoViewControllerViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A995B8E1312798300781831 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A995B961312798300781831 /* UIKit.framework in Frameworks */,
+				1A995B981312798300781831 /* Foundation.framework in Frameworks */,
+				1A995B9A1312798300781831 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A995B861312798300781831 = {
+			isa = PBXGroup;
+			children = (
+				1A995B9B1312798300781831 /* PhotoViewController */,
+				1A995B941312798300781831 /* Frameworks */,
+				1A995B921312798300781831 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A995B921312798300781831 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A995B911312798300781831 /* PhotoViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A995B941312798300781831 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A995B951312798300781831 /* UIKit.framework */,
+				1A995B971312798300781831 /* Foundation.framework */,
+				1A995B991312798300781831 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A995B9B1312798300781831 /* PhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A995BA41312798300781831 /* PhotoViewControllerAppDelegate.h */,
+				1A995BA51312798300781831 /* PhotoViewControllerAppDelegate.m */,
+				1A995BA71312798300781831 /* MainWindow.xib */,
+				1A995BAA1312798300781831 /* PhotoViewControllerViewController.h */,
+				1A995BAB1312798300781831 /* PhotoViewControllerViewController.m */,
+				1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */,
+				1A995B9C1312798300781831 /* Supporting Files */,
+			);
+			path = PhotoViewController;
+			sourceTree = "<group>";
+		};
+		1A995B9C1312798300781831 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A995B9D1312798300781831 /* PhotoViewController-Info.plist */,
+				1A995B9E1312798300781831 /* InfoPlist.strings */,
+				1A995BA11312798300781831 /* PhotoViewController-Prefix.pch */,
+				1A995BA21312798300781831 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A995B901312798300781831 /* PhotoViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A995BB21312798300781831 /* Build configuration list for PBXNativeTarget "PhotoViewController" */;
+			buildPhases = (
+				1A995B8D1312798300781831 /* Sources */,
+				1A995B8E1312798300781831 /* Frameworks */,
+				1A995B8F1312798300781831 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoViewController;
+			productName = PhotoViewController;
+			productReference = 1A995B911312798300781831 /* PhotoViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A995B881312798300781831 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1A995B8B1312798300781831 /* Build configuration list for PBXProject "PhotoViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A995B861312798300781831;
+			productRefGroup = 1A995B921312798300781831 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A995B901312798300781831 /* PhotoViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A995B8F1312798300781831 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A995BA01312798300781831 /* InfoPlist.strings in Resources */,
+				1A995BA91312798300781831 /* MainWindow.xib in Resources */,
+				1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A995B8D1312798300781831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A995BA31312798300781831 /* main.m in Sources */,
+				1A995BA61312798300781831 /* PhotoViewControllerAppDelegate.m in Sources */,
+				1A995BAC1312798300781831 /* PhotoViewControllerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A995B9E1312798300781831 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A995B9F1312798300781831 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1A995BA71312798300781831 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A995BA81312798300781831 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A995BAE1312798300781831 /* en */,
+			);
+			name = PhotoViewControllerViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A995BB01312798300781831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A995BB11312798300781831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1A995BB31312798300781831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhotoViewController/PhotoViewController-Prefix.pch";
+				INFOPLIST_FILE = "PhotoViewController/PhotoViewController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1A995BB41312798300781831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhotoViewController/PhotoViewController-Prefix.pch";
+				INFOPLIST_FILE = "PhotoViewController/PhotoViewController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A995B8B1312798300781831 /* Build configuration list for PBXProject "PhotoViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A995BB01312798300781831 /* Debug */,
+				1A995BB11312798300781831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A995BB21312798300781831 /* Build configuration list for PBXNativeTarget "PhotoViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A995BB31312798300781831 /* Debug */,
+				1A995BB41312798300781831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A995B881312798300781831 /* Project object */;
+}
