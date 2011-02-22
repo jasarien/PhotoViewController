@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4BFF571314240D00F2B47A /* JSPhotoDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BFF561314240C00F2B47A /* JSPhotoDownloadOperation.m */; };
+		1A8A90E91312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A90E81312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png */; };
+		1A8C386A131285690058643D /* JSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C3869131285690058643D /* JSPhoto.m */; };
+		1A8C386D1312871C0058643D /* JSPhotoThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C386C1312871C0058643D /* JSPhotoThumbsViewController.m */; };
+		1A8C38701312951F0058643D /* JSPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C386F1312951F0058643D /* JSPhotoTableViewCell.m */; };
+		1A8C38721312B5F30058643D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8C38711312B5F30058643D /* QuartzCore.framework */; };
 		1A995B961312798300781831 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A995B951312798300781831 /* UIKit.framework */; };
 		1A995B981312798300781831 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A995B971312798300781831 /* Foundation.framework */; };
 		1A995B9A1312798300781831 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A995B991312798300781831 /* CoreGraphics.framework */; };
@@ -16,23 +22,39 @@
 		1A995BA91312798300781831 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BA71312798300781831 /* MainWindow.xib */; };
 		1A995BAC1312798300781831 /* PhotoViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BAB1312798300781831 /* PhotoViewControllerViewController.m */; };
 		1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */; };
+		1A995BC71312800E00781831 /* JSPhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BC61312800E00781831 /* JSPhotoCache.m */; };
+		1AB5BF661313C3F000E13DAD /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A4BFF551314240C00F2B47A /* JSPhotoDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoDownloadOperation.h; sourceTree = "<group>"; };
+		1A4BFF561314240C00F2B47A /* JSPhotoDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoDownloadOperation.m; sourceTree = "<group>"; };
+		1A8A90E81312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2011.02.15 11.57.06.png"; sourceTree = "<group>"; };
+		1A8C3868131285690058643D /* JSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhoto.h; sourceTree = "<group>"; };
+		1A8C3869131285690058643D /* JSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhoto.m; sourceTree = "<group>"; };
+		1A8C386B1312871C0058643D /* JSPhotoThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoThumbsViewController.h; sourceTree = "<group>"; };
+		1A8C386C1312871C0058643D /* JSPhotoThumbsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoThumbsViewController.m; sourceTree = "<group>"; };
+		1A8C386E1312951F0058643D /* JSPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoTableViewCell.h; sourceTree = "<group>"; };
+		1A8C386F1312951F0058643D /* JSPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoTableViewCell.m; sourceTree = "<group>"; };
+		1A8C38711312B5F30058643D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1A995B911312798300781831 /* PhotoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A995B951312798300781831 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A995B971312798300781831 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A995B991312798300781831 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1A995B9D1312798300781831 /* PhotoViewController-Info.plist */ = {isa = PBXFileReference; path = "PhotoViewController-Info.plist"; sourceTree = "<group>"; };
+		1A995B9D1312798300781831 /* PhotoViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoViewController-Info.plist"; sourceTree = "<group>"; };
 		1A995B9F1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1A995BA11312798300781831 /* PhotoViewController-Prefix.pch */ = {isa = PBXFileReference; path = "PhotoViewController-Prefix.pch"; sourceTree = "<group>"; };
+		1A995BA11312798300781831 /* PhotoViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoViewController-Prefix.pch"; sourceTree = "<group>"; };
 		1A995BA21312798300781831 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A995BA41312798300781831 /* PhotoViewControllerAppDelegate.h */ = {isa = PBXFileReference; path = PhotoViewControllerAppDelegate.h; sourceTree = "<group>"; };
+		1A995BA41312798300781831 /* PhotoViewControllerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewControllerAppDelegate.h; sourceTree = "<group>"; };
 		1A995BA51312798300781831 /* PhotoViewControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerAppDelegate.m; sourceTree = "<group>"; };
 		1A995BA81312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		1A995BAA1312798300781831 /* PhotoViewControllerViewController.h */ = {isa = PBXFileReference; path = PhotoViewControllerViewController.h; sourceTree = "<group>"; };
+		1A995BAA1312798300781831 /* PhotoViewControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewControllerViewController.h; sourceTree = "<group>"; };
 		1A995BAB1312798300781831 /* PhotoViewControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerViewController.m; sourceTree = "<group>"; };
 		1A995BAE1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotoViewControllerViewController.xib; sourceTree = "<group>"; };
+		1A995BC51312800E00781831 /* JSPhotoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoCache.h; sourceTree = "<group>"; };
+		1A995BC61312800E00781831 /* JSPhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoCache.m; sourceTree = "<group>"; };
+		1AB5BF641313C3F000E13DAD /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
+		1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8C38721312B5F30058643D /* QuartzCore.framework in Frameworks */,
 				1A995B961312798300781831 /* UIKit.framework in Frameworks */,
 				1A995B981312798300781831 /* Foundation.framework in Frameworks */,
 				1A995B9A1312798300781831 /* CoreGraphics.framework in Frameworks */,
@@ -53,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				1A995B9B1312798300781831 /* PhotoViewController */,
+				1A995BB51312798E00781831 /* Resources */,
+				1A995B9C1312798300781831 /* Supporting Files */,
 				1A995B941312798300781831 /* Frameworks */,
 				1A995B921312798300781831 /* Products */,
 			);
@@ -72,6 +97,7 @@
 				1A995B951312798300781831 /* UIKit.framework */,
 				1A995B971312798300781831 /* Foundation.framework */,
 				1A995B991312798300781831 /* CoreGraphics.framework */,
+				1A8C38711312B5F30058643D /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,11 +107,20 @@
 			children = (
 				1A995BA41312798300781831 /* PhotoViewControllerAppDelegate.h */,
 				1A995BA51312798300781831 /* PhotoViewControllerAppDelegate.m */,
-				1A995BA71312798300781831 /* MainWindow.xib */,
 				1A995BAA1312798300781831 /* PhotoViewControllerViewController.h */,
 				1A995BAB1312798300781831 /* PhotoViewControllerViewController.m */,
-				1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */,
-				1A995B9C1312798300781831 /* Supporting Files */,
+				1A995BC51312800E00781831 /* JSPhotoCache.h */,
+				1A995BC61312800E00781831 /* JSPhotoCache.m */,
+				1A8C3868131285690058643D /* JSPhoto.h */,
+				1A8C3869131285690058643D /* JSPhoto.m */,
+				1A8C386B1312871C0058643D /* JSPhotoThumbsViewController.h */,
+				1A8C386C1312871C0058643D /* JSPhotoThumbsViewController.m */,
+				1A8C386E1312951F0058643D /* JSPhotoTableViewCell.h */,
+				1A8C386F1312951F0058643D /* JSPhotoTableViewCell.m */,
+				1AB5BF641313C3F000E13DAD /* NSString+Hashing.h */,
+				1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */,
+				1A4BFF551314240C00F2B47A /* JSPhotoDownloadOperation.h */,
+				1A4BFF561314240C00F2B47A /* JSPhotoDownloadOperation.m */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -99,6 +134,17 @@
 				1A995BA21312798300781831 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = PhotoViewController;
+			sourceTree = "<group>";
+		};
+		1A995BB51312798E00781831 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A90E81312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png */,
+				1A995BA71312798300781831 /* MainWindow.xib */,
+				1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +197,7 @@
 				1A995BA01312798300781831 /* InfoPlist.strings in Resources */,
 				1A995BA91312798300781831 /* MainWindow.xib in Resources */,
 				1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */,
+				1A8A90E91312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +211,12 @@
 				1A995BA31312798300781831 /* main.m in Sources */,
 				1A995BA61312798300781831 /* PhotoViewControllerAppDelegate.m in Sources */,
 				1A995BAC1312798300781831 /* PhotoViewControllerViewController.m in Sources */,
+				1A995BC71312800E00781831 /* JSPhotoCache.m in Sources */,
+				1A8C386A131285690058643D /* JSPhoto.m in Sources */,
+				1A8C386D1312871C0058643D /* JSPhotoThumbsViewController.m in Sources */,
+				1A8C38701312951F0058643D /* JSPhotoTableViewCell.m in Sources */,
+				1AB5BF661313C3F000E13DAD /* NSString+Hashing.m in Sources */,
+				1A4BFF571314240D00F2B47A /* JSPhotoDownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +237,7 @@
 				1A995BA81312798300781831 /* en */,
 			);
 			name = MainWindow.xib;
+			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
 		1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */ = {
@@ -192,6 +246,7 @@
 				1A995BAE1312798300781831 /* en */,
 			);
 			name = PhotoViewControllerViewController.xib;
+			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -277,6 +332,7 @@
 				1A995BB41312798300781831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
