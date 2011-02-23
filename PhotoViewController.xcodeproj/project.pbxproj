@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A4BFF571314240D00F2B47A /* JSPhotoDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BFF561314240C00F2B47A /* JSPhotoDownloadOperation.m */; };
-		1A8A90E91312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A90E81312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png */; };
+		1A3BFD0D131481DE00564CB1 /* JSLazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */; };
 		1A8C386A131285690058643D /* JSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C3869131285690058643D /* JSPhoto.m */; };
 		1A8C386D1312871C0058643D /* JSPhotoThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C386C1312871C0058643D /* JSPhotoThumbsViewController.m */; };
 		1A8C38701312951F0058643D /* JSPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C386F1312951F0058643D /* JSPhotoTableViewCell.m */; };
@@ -27,9 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A4BFF551314240C00F2B47A /* JSPhotoDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoDownloadOperation.h; sourceTree = "<group>"; };
-		1A4BFF561314240C00F2B47A /* JSPhotoDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoDownloadOperation.m; sourceTree = "<group>"; };
-		1A8A90E81312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2011.02.15 11.57.06.png"; sourceTree = "<group>"; };
+		1A3BFD0B131481DE00564CB1 /* JSLazyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLazyImageView.h; sourceTree = "<group>"; };
+		1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLazyImageView.m; sourceTree = "<group>"; };
 		1A8C3868131285690058643D /* JSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhoto.h; sourceTree = "<group>"; };
 		1A8C3869131285690058643D /* JSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhoto.m; sourceTree = "<group>"; };
 		1A8C386B1312871C0058643D /* JSPhotoThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoThumbsViewController.h; sourceTree = "<group>"; };
@@ -119,8 +117,8 @@
 				1A8C386F1312951F0058643D /* JSPhotoTableViewCell.m */,
 				1AB5BF641313C3F000E13DAD /* NSString+Hashing.h */,
 				1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */,
-				1A4BFF551314240C00F2B47A /* JSPhotoDownloadOperation.h */,
-				1A4BFF561314240C00F2B47A /* JSPhotoDownloadOperation.m */,
+				1A3BFD0B131481DE00564CB1 /* JSLazyImageView.h */,
+				1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -140,7 +138,6 @@
 		1A995BB51312798E00781831 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A8A90E81312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png */,
 				1A995BA71312798300781831 /* MainWindow.xib */,
 				1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */,
 			);
@@ -197,7 +194,6 @@
 				1A995BA01312798300781831 /* InfoPlist.strings in Resources */,
 				1A995BA91312798300781831 /* MainWindow.xib in Resources */,
 				1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */,
-				1A8A90E91312BFF2002FAA05 /* Screenshot 2011.02.15 11.57.06.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +212,7 @@
 				1A8C386D1312871C0058643D /* JSPhotoThumbsViewController.m in Sources */,
 				1A8C38701312951F0058643D /* JSPhotoTableViewCell.m in Sources */,
 				1AB5BF661313C3F000E13DAD /* NSString+Hashing.m in Sources */,
-				1A4BFF571314240D00F2B47A /* JSPhotoDownloadOperation.m in Sources */,
+				1A3BFD0D131481DE00564CB1 /* JSLazyImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

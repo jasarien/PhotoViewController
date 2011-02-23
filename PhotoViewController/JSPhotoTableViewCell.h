@@ -15,6 +15,7 @@ CGFloat const padding;
 	NSArray *_photos;
 	NSMutableArray *_imageViews;
 	
+	NSUInteger _touchedImageIndex;
 }
 
 @property (nonatomic, retain) NSArray *photos;

@@ -10,12 +10,15 @@
 #import <QuartzCore/QuartzCore.h>
 #import "JSPhoto.h"
 #import "JSPhotoCache.h"
+#import "JSLazyImageView.h"
 
 CGFloat const padding = 4.0;
 
 @interface JSPhotoTableViewCell ()
 
 - (void)updateImageViews;
+- (void)dimImageView:(JSLazyImageView *)imageView;
+- (void)unDimImageView:(JSLazyImageView *)imageView;
 
 @end
 
@@ -32,7 +35,7 @@ CGFloat const padding = 4.0;
 		
 		for (int i = 0; i < 6; i++)
 		{
-			UIImageView *imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 75, 75)] autorelease];
+			JSLazyImageView *imageView = [[[JSLazyImageView alloc] initWithFrame:CGRectMake(0, 0, 75, 75)] autorelease];
 			[imageView setContentMode:UIViewContentModeScaleAspectFill];
 			[imageView setOpaque:YES];
 			[imageView setClipsToBounds:YES];
@@ -62,25 +65,15 @@ CGFloat const padding = 4.0;
 	[_photos release];
 	_photos = [photos retain];
 	
-	for (JSPhoto *photo in _photos)
-	{
-		[photo addObserver:self
-				forKeyPath:@"photoThumbFilePath"
-				   options:NSKeyValueObservingOptionOld
-				   context:nil];
-	}
-	
 	[self updateImageViews];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)prepareForReuse
 {
-	JSPhoto *photo = (JSPhoto *)object;
-	NSUInteger index = [_photos indexOfObject:photo];
-	NSString *filePath = [photo photoThumbFilePath];
-	
-	UIImageView *imageView = [_imageViews objectAtIndex:index];
-	[imageView setImage:[UIImage imageWithContentsOfFile:filePath]];
+	for (JSLazyImageView *imageView in _imageViews)
+	{
+		[imageView setImage:nil];
+	}
 }
 
 - (void)layoutSubviews
@@ -91,7 +84,7 @@ CGFloat const padding = 4.0;
 	
 	for (int i = 0; i < [_imageViews count]; i++)
 	{
-		UIImageView *imageView = [_imageViews objectAtIndex:i];
+		JSLazyImageView *imageView = [_imageViews objectAtIndex:i];
 		CGRect frame = [imageView frame];
 		frame.origin.x = xPos;
 		xPos += frame.size.width + padding;
@@ -102,42 +95,93 @@ CGFloat const padding = 4.0;
 
 - (void)updateImageViews
 {
-	for (UIImageView *imageView in _imageViews)
-	{
-		[imageView setImage:nil];
-		[[imageView layer] setBorderWidth:0.0];
-		[[imageView layer] setBorderColor:NULL];
-	}
-	
 	for (int i = 0; i < [_photos count]; i++)
 	{
+		JSLazyImageView *imageView = [_imageViews objectAtIndex:i];
 		JSPhoto *photo = [_photos objectAtIndex:i];
 		
-		UIImageView *imageView = [_imageViews objectAtIndex:i];
-		[[imageView layer] setBorderWidth:1.0];
-		[[imageView layer] setBorderColor:[[UIColor blackColor] CGColor]];
-		
-		if ([[photo photoThumbFilePath] length])
+		[imageView setImageURL:[photo photoThumbURL]];
+		[imageView startLoad];
+	}
+}
+
+- (void)dimImageView:(JSLazyImageView *)imageView
+{
+	[[imageView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+	UIView *overlay = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, [imageView frame].size.width, [imageView frame].size.height)] autorelease];
+	[overlay setBackgroundColor:[UIColor blackColor]];
+	[overlay setAlpha:0.3];
+	[overlay setOpaque:NO];
+	[imageView addSubview:overlay];
+}
+
+- (void)unDimImageView:(JSLazyImageView *)imageView
+{
+	[[imageView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self];
+	
+	for (JSLazyImageView *imageView in _imageViews)
+	{
+		if (CGRectContainsPoint([imageView frame], location) && ([imageView image] != nil))
 		{
-			UIImageView *imageView = [_imageViews objectAtIndex:i];
-			[imageView setImage:[UIImage imageWithContentsOfFile:[photo photoThumbFilePath]]];
+			_touchedImageIndex = [_imageViews indexOfObject:imageView];
+			if (_touchedImageIndex < [self.photos count])
+			{
+				[self dimImageView:imageView];
+				break;
+			}
+		}
+	}
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	if (!_touchedImageIndex)
+		return;
+	
+	JSLazyImageView *imageView = [_imageViews objectAtIndex:_touchedImageIndex];
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self];
+	
+	if (CGRectContainsPoint([imageView frame], location))
+	{
+		[self dimImageView:imageView];
+	}
+	else
+	{
+		[self unDimImageView:imageView];
+	}
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[self unDimImageView:[_imageViews objectAtIndex:_touchedImageIndex]];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	if (_touchedImageIndex < [self.photos count])
+	{
+		JSLazyImageView *imageView = [_imageViews objectAtIndex:_touchedImageIndex];
+		UITouch *touch = [touches anyObject];
+		CGPoint location = [touch locationInView:self];
+		
+		if (CGRectContainsPoint([imageView frame], location))
+		{
+			[self unDimImageView:imageView];
+//			if ([self.delegate respondsToSelector:@selector(displayScreenshot:)])
+//			{
+//				[self.delegate displayScreenshot:[self.screenshots objectAtIndex:_touchedImageIndex]];
+//			}
 		}
 		else
 		{
-			dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-				NSLog(@"About to download image from: %@", [[photo photoThumbURL] absoluteString]);
-				UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[photo photoThumbURL]]];
-				NSLog(@"Image downloaded: %@", image);
-				NSLog(@"Caching image");
-				NSString *imagePath = [JSPhotoCache writeImageToDisk:image withKey:[[photo photoThumbURL] absoluteString]];
-				NSLog(@"Image cached to: %@", imagePath); 
-				[image release];
-				dispatch_async(dispatch_get_main_queue(), ^{
-					NSLog(@"About to set photo File Path");
-					[photo setPhotoThumbFilePath:imagePath];
-					NSLog(@"Set photo file path to: %@", imagePath);
-				});
-			});
+			[self unDimImageView:imageView];
 		}
 	}
 }

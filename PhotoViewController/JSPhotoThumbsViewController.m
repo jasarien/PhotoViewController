@@ -26,6 +26,17 @@ NSInteger const imagesPerCellLandscape = 6;
 		[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 		[self.tableView setRowHeight:79.0];
 		[self.tableView setContentInset:UIEdgeInsetsMake(4.0, 0.0, 0.0, 0.0)];
+		
+		UILabel *footer = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 48)] autorelease];
+		[footer setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+		[footer setFont:[UIFont systemFontOfSize:22]];
+		[footer setTextColor:[UIColor colorWithRed:128.0/255.0
+											 green:136.0/255.0
+											  blue:149.0/255.0
+											 alpha:1.0]];
+		[footer setTextAlignment:UITextAlignmentCenter];
+		[footer setText:[NSString stringWithFormat:@"%d Photos", [_photos count]]];
+		[self.tableView setTableFooterView:footer];
 	}
 	
 	return self;
@@ -77,6 +88,11 @@ NSInteger const imagesPerCellLandscape = 6;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	[self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

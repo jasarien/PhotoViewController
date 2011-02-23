@@ -86,6 +86,7 @@
 	UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:thumbsVC] autorelease];
 	[[navController navigationBar] setBarStyle:UIBarStyleBlackTranslucent];
 	[self presentModalViewController:navController animated:YES];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
 }
 
 
