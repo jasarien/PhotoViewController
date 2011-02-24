@@ -14,6 +14,8 @@
 
 @synthesize imageURL = _imageURL;
 @synthesize showSpinner = _showSpinner;
+@synthesize showBorder = _showBorder;
+@synthesize isLoading = _isLoading;
 
 - (id)initWithFrame:(CGRect)frame imageURL:(NSURL *)imageURL
 {
@@ -43,12 +45,12 @@
 
 - (void) dealloc
 {
+	[_imageData release], _imageData = nil;
 	[_connection cancel];
 	[_connection release], _connection = nil;
 	
 	self.imageURL = nil;
 	[_spinner release], _spinner = nil;
-	[_imageData release], _imageData = nil;
 	[super dealloc];
 }
 
@@ -64,7 +66,10 @@
 	
 	if (_imageURL)
 	{
-		self.layer.borderWidth = 1;
+		if (_showBorder)
+		{
+			self.layer.borderWidth = 1;
+		}
 	}
 	else
 	{
@@ -75,10 +80,15 @@
 - (void)setImage:(UIImage *)image
 {
 	[super setImage:image];
+
+	_isLoading = NO;
 	
 	if (image)
 	{
-		self.layer.borderWidth = 1;
+		if (_showBorder)
+		{
+			self.layer.borderWidth = 1;
+		}
 	}
 	else
 	{
@@ -88,6 +98,9 @@
 
 - (void)startLoad
 {
+	if (_isLoading)
+		return;
+	
 	if (self.showSpinner)
 		[_spinner startAnimating];
 	
@@ -104,10 +117,21 @@
 	_connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
 	_imageData = [[NSMutableData alloc] init];
 	[_connection start];
+	
+	_isLoading = YES;
+}
+
+- (void)cancelLoad
+{
+	_isLoading = NO;
+	[_connection cancel];
+	[self setImage:nil];
+	[_imageData release], _imageData = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+	_isLoading = NO;
 	[_spinner stopAnimating];
 }
 
@@ -118,6 +142,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+	_isLoading = NO;
 	[_spinner stopAnimating];
 	
 	UIImage *anImage = [[UIImage alloc] initWithData:_imageData];

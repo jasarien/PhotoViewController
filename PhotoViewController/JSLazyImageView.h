@@ -17,12 +17,17 @@
 	NSMutableData *_imageData;
 	
 	BOOL _showSpinner;
+	BOOL _showBorder;
+	BOOL _isLoading;
 }
 
 @property (nonatomic, retain) NSURL *imageURL;
 @property (nonatomic, assign) BOOL showSpinner;
+@property (nonatomic, assign) BOOL showBorder;
+@property (nonatomic, assign) BOOL isLoading;
 
 - (id)initWithFrame:(CGRect)frame imageURL:(NSURL *)imageURL;
 - (void)startLoad;
+- (void)cancelLoad;
 
 @end

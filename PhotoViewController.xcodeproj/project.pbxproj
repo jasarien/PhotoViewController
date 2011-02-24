@@ -17,6 +17,12 @@
 		1A27136113159B2900B5BCA5 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A27135813159B2900B5BCA5 /* SBJsonTokeniser.m */; };
 		1A27136213159B2900B5BCA5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A27135913159B2900B5BCA5 /* SBJsonWriter.m */; };
 		1A27136413159BE100B5BCA5 /* flickr.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A27136313159BE100B5BCA5 /* flickr.json */; };
+		1A2713681315A3CC00B5BCA5 /* JSPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2713661315A3C900B5BCA5 /* JSPhotoViewController.m */; };
+		1A2713691315A3CC00B5BCA5 /* JSPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2713671315A3CA00B5BCA5 /* JSPhotoViewController.xib */; };
+		1A27136E1315A8A700B5BCA5 /* nextIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A27136A1315A8A700B5BCA5 /* nextIcon.png */; };
+		1A27136F1315A8A700B5BCA5 /* nextIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A27136B1315A8A700B5BCA5 /* nextIcon@2x.png */; };
+		1A2713701315A8A700B5BCA5 /* previousIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A27136C1315A8A700B5BCA5 /* previousIcon.png */; };
+		1A2713711315A8A700B5BCA5 /* previousIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A27136D1315A8A700B5BCA5 /* previousIcon@2x.png */; };
 		1A3BFD0D131481DE00564CB1 /* JSLazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */; };
 		1A8C386A131285690058643D /* JSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C3869131285690058643D /* JSPhoto.m */; };
 		1A8C386D1312871C0058643D /* JSPhotoThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C386C1312871C0058643D /* JSPhotoThumbsViewController.m */; };
@@ -30,7 +36,7 @@
 		1A995BA61312798300781831 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BA51312798300781831 /* DemoAppDelegate.m */; };
 		1A995BA91312798300781831 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BA71312798300781831 /* MainWindow.xib */; };
 		1A995BAC1312798300781831 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BAB1312798300781831 /* DemoViewController.m */; };
-		1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */; };
+		1A995BAF1312798300781831 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BAD1312798300781831 /* DemoViewController.xib */; };
 		1A995BC71312800E00781831 /* JSPhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BC61312800E00781831 /* JSPhotoCache.m */; };
 		1AB5BF661313C3F000E13DAD /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +62,13 @@
 		1A27135813159B2900B5BCA5 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
 		1A27135913159B2900B5BCA5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		1A27136313159BE100B5BCA5 /* flickr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flickr.json; sourceTree = "<group>"; };
+		1A2713651315A3C800B5BCA5 /* JSPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoViewController.h; sourceTree = "<group>"; };
+		1A2713661315A3C900B5BCA5 /* JSPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoViewController.m; sourceTree = "<group>"; };
+		1A2713671315A3CA00B5BCA5 /* JSPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JSPhotoViewController.xib; path = PhotoViewController/JSPhotoViewController.xib; sourceTree = "<group>"; };
+		1A27136A1315A8A700B5BCA5 /* nextIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextIcon.png; sourceTree = "<group>"; };
+		1A27136B1315A8A700B5BCA5 /* nextIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextIcon@2x.png"; sourceTree = "<group>"; };
+		1A27136C1315A8A700B5BCA5 /* previousIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previousIcon.png; sourceTree = "<group>"; };
+		1A27136D1315A8A700B5BCA5 /* previousIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "previousIcon@2x.png"; sourceTree = "<group>"; };
 		1A3BFD0B131481DE00564CB1 /* JSLazyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLazyImageView.h; sourceTree = "<group>"; };
 		1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLazyImageView.m; sourceTree = "<group>"; };
 		1A8C3868131285690058643D /* JSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhoto.h; sourceTree = "<group>"; };
@@ -73,12 +86,12 @@
 		1A995B9F1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A995BA11312798300781831 /* PhotoViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoViewController-Prefix.pch"; sourceTree = "<group>"; };
 		1A995BA21312798300781831 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A995BA41312798300781831 /* DemoAppDelegate.h */ = {isa = PBXFileReference; path = DemoAppDelegate.h; sourceTree = "<group>"; };
+		1A995BA41312798300781831 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
 		1A995BA51312798300781831 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
 		1A995BA81312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		1A995BAA1312798300781831 /* DemoViewController.h */ = {isa = PBXFileReference; path = DemoViewController.h; sourceTree = "<group>"; };
+		1A995BAA1312798300781831 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		1A995BAB1312798300781831 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		1A995BAE1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotoViewControllerViewController.xib; sourceTree = "<group>"; };
+		1A995BAE1312798300781831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DemoViewController.xib; sourceTree = "<group>"; };
 		1A995BC51312800E00781831 /* JSPhotoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoCache.h; sourceTree = "<group>"; };
 		1A995BC61312800E00781831 /* JSPhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoCache.m; sourceTree = "<group>"; };
 		1AB5BF641313C3F000E13DAD /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -176,6 +189,8 @@
 				1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */,
 				1A3BFD0B131481DE00564CB1 /* JSLazyImageView.h */,
 				1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */,
+				1A2713651315A3C800B5BCA5 /* JSPhotoViewController.h */,
+				1A2713661315A3C900B5BCA5 /* JSPhotoViewController.m */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -195,8 +210,13 @@
 		1A995BB51312798E00781831 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A27136A1315A8A700B5BCA5 /* nextIcon.png */,
+				1A27136B1315A8A700B5BCA5 /* nextIcon@2x.png */,
+				1A27136C1315A8A700B5BCA5 /* previousIcon.png */,
+				1A27136D1315A8A700B5BCA5 /* previousIcon@2x.png */,
 				1A995BA71312798300781831 /* MainWindow.xib */,
-				1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */,
+				1A995BAD1312798300781831 /* DemoViewController.xib */,
+				1A2713671315A3CA00B5BCA5 /* JSPhotoViewController.xib */,
 				1A27136313159BE100B5BCA5 /* flickr.json */,
 			);
 			name = Resources;
@@ -251,8 +271,13 @@
 			files = (
 				1A995BA01312798300781831 /* InfoPlist.strings in Resources */,
 				1A995BA91312798300781831 /* MainWindow.xib in Resources */,
-				1A995BAF1312798300781831 /* PhotoViewControllerViewController.xib in Resources */,
+				1A995BAF1312798300781831 /* DemoViewController.xib in Resources */,
 				1A27136413159BE100B5BCA5 /* flickr.json in Resources */,
+				1A2713691315A3CC00B5BCA5 /* JSPhotoViewController.xib in Resources */,
+				1A27136E1315A8A700B5BCA5 /* nextIcon.png in Resources */,
+				1A27136F1315A8A700B5BCA5 /* nextIcon@2x.png in Resources */,
+				1A2713701315A8A700B5BCA5 /* previousIcon.png in Resources */,
+				1A2713711315A8A700B5BCA5 /* previousIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +306,7 @@
 				1A27136013159B2900B5BCA5 /* SBJsonStreamWriterState.m in Sources */,
 				1A27136113159B2900B5BCA5 /* SBJsonTokeniser.m in Sources */,
 				1A27136213159B2900B5BCA5 /* SBJsonWriter.m in Sources */,
+				1A2713681315A3CC00B5BCA5 /* JSPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +330,12 @@
 			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
-		1A995BAD1312798300781831 /* PhotoViewControllerViewController.xib */ = {
+		1A995BAD1312798300781831 /* DemoViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1A995BAE1312798300781831 /* en */,
 			);
-			name = PhotoViewControllerViewController.xib;
+			name = DemoViewController.xib;
 			path = PhotoViewController;
 			sourceTree = "<group>";
 		};

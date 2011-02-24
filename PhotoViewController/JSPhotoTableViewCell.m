@@ -35,12 +35,14 @@ CGFloat const padding = 4.0;
 		
 		for (int i = 0; i < 6; i++)
 		{
-			JSLazyImageView *imageView = [[[JSLazyImageView alloc] initWithFrame:CGRectMake(0, 0, 75, 75)] autorelease];
+			JSLazyImageView *imageView = [[JSLazyImageView alloc] initWithFrame:CGRectMake(0, 0, 75, 75)];
 			[imageView setContentMode:UIViewContentModeScaleAspectFill];
 			[imageView setOpaque:YES];
 			[imageView setClipsToBounds:YES];
+			[imageView setShowBorder:YES];
 			[[self contentView] addSubview:imageView];
 			[_imageViews addObject:imageView];
+			[imageView release];
 		}
 	}
 	
@@ -49,12 +51,9 @@ CGFloat const padding = 4.0;
 
 - (void)dealloc
 {
-	for (JSPhoto *photo in _photos)
-	{
-		[photo removeObserver:self forKeyPath:@"photoThumbFilePath"];
-	}
-	
 	self.photos = nil;
+	[_imageViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+	[_imageViews removeAllObjects];
 	[_imageViews release], _imageViews = nil;
 	
 	[super dealloc];
@@ -72,7 +71,7 @@ CGFloat const padding = 4.0;
 {
 	for (JSLazyImageView *imageView in _imageViews)
 	{
-		[imageView setImage:nil];
+		[imageView cancelLoad];
 	}
 }
 

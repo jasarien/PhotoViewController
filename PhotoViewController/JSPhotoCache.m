@@ -69,11 +69,19 @@ NSString * const kJSPhotoCachePath = @"JSPhotoCache";
 	NSString *keyHash = [key MD5Hash];
 	cachePath = [cachePath stringByAppendingPathComponent:keyHash];
 	
-	NSData *imageData = UIImagePNGRepresentation(image);
+	NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
 	BOOL success = [imageData writeToFile:cachePath atomically:YES];
 	
 	return (success) ? cachePath : nil;
 }
 
++ (void)emptyCache
+{
+	NSString *cachePath = [self cachePath];
+	if ([[NSFileManager defaultManager] fileExistsAtPath:cachePath])
+	{
+		[[NSFileManager defaultManager] removeItemAtPath:cachePath error:nil];
+	}
+}
 
 @end

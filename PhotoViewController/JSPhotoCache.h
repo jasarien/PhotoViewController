@@ -18,6 +18,6 @@ extern NSString * const kJSPhotoCachePath;
 + (UIImage *)imageForKey:(NSString *)key;
 + (NSString *)imagePathForKey:(NSString *)key;
 + (NSString *)writeImageToDisk:(UIImage *)image withKey:(NSString *)key;
-
++ (void)emptyCache;
 
 @end

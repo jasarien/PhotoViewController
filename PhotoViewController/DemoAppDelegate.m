@@ -8,7 +8,7 @@
 
 #import "DemoAppDelegate.h"
 
-#import "PhotoViewControllerViewController.h"
+#import "DemoViewController.h"
 
 @implementation DemoAppDelegate
 
