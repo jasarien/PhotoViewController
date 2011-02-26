@@ -113,7 +113,8 @@
 		return;
 	}
 	
-	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:self.imageURL];
+	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:self.imageURL];
+	[urlRequest setCachePolicy:NSURLRequestReloadIgnoringCacheData];
 	_connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
 	_imageData = [[NSMutableData alloc] init];
 	[_connection start];

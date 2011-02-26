@@ -47,7 +47,11 @@ NSString * const kJSPhotoCachePath = @"JSPhotoCache";
 	NSString *keyHash = [key MD5Hash];
 	cachePath = [cachePath stringByAppendingPathComponent:keyHash];
 	
-	UIImage *image = [UIImage imageWithContentsOfFile:cachePath];
+	UIImage *image = nil;
+	if ([[NSFileManager defaultManager] fileExistsAtPath:cachePath])
+	{
+		image = [UIImage imageWithContentsOfFile:cachePath];
+	}
 	
 	return image;
 }

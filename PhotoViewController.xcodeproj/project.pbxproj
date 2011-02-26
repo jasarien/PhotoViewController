@@ -39,6 +39,7 @@
 		1A995BAF1312798300781831 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A995BAD1312798300781831 /* DemoViewController.xib */; };
 		1A995BC71312800E00781831 /* JSPhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A995BC61312800E00781831 /* JSPhotoCache.m */; };
 		1AB5BF661313C3F000E13DAD /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */; };
+		1AD28A191318A27000A9BB40 /* JSLazyImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD28A181318A27000A9BB40 /* JSLazyImageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		1A995BC61312800E00781831 /* JSPhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoCache.m; sourceTree = "<group>"; };
 		1AB5BF641313C3F000E13DAD /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
 		1AB5BF651313C3F000E13DAD /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
+		1AD28A171318A27000A9BB40 /* JSLazyImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLazyImageScrollView.h; sourceTree = "<group>"; };
+		1AD28A181318A27000A9BB40 /* JSLazyImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLazyImageScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 				1A3BFD0C131481DE00564CB1 /* JSLazyImageView.m */,
 				1A2713651315A3C800B5BCA5 /* JSPhotoViewController.h */,
 				1A2713661315A3C900B5BCA5 /* JSPhotoViewController.m */,
+				1AD28A171318A27000A9BB40 /* JSLazyImageScrollView.h */,
+				1AD28A181318A27000A9BB40 /* JSLazyImageScrollView.m */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				1A27136113159B2900B5BCA5 /* SBJsonTokeniser.m in Sources */,
 				1A27136213159B2900B5BCA5 /* SBJsonWriter.m in Sources */,
 				1A2713681315A3CC00B5BCA5 /* JSPhotoViewController.m in Sources */,
+				1AD28A191318A27000A9BB40 /* JSLazyImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

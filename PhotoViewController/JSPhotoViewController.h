@@ -16,9 +16,13 @@
 	UIBarButtonItem *_previousButton;
 	UIBarButtonItem *_nextButton;
 	
+	UIView *_contentView; // weak
+	
 	NSArray *_photos;
 	NSArray *_imageViews;
-	NSUInteger _currentPhotoIndex;
+	NSInteger _currentPhotoIndex;
+	
+	BOOL _barsHidden;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
